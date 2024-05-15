@@ -1,6 +1,7 @@
 <script setup>
 import LocationIcon from './icons/LocationIcon.vue'
 import SocialLinks from './SocialLinks.vue'
+import From from './Form.vue'
 defineProps({
     ProfileName: {
         type: String,
@@ -23,47 +24,76 @@ defineProps({
 
 <template>
     <div class="profile">
-        <h2 class="profile__name"> {{ ProfileName }}</h2>
-        <p class="profile__descripiton"> {{ ProfileDescription }}</p>
-        <LocationIcon class="profile__location-icon"> </LocationIcon>
-        <div>
-            <SocialLinks socialIcon="#" socialLink="#" socialName="Facebook" />
-            <SocialLinks socialIcon="#" socialLink="#" socialName="Twitter" />
-            <SocialLinks socialIcon="#" socialLink="#" socialName="LinkedIn" />
-        </div>
-        <span class="profile__location"> {{ Location }} </span>
         <img class="profile__picture" s:src="ProfilePicture" alt="Description of image">
+        <div class="profile__content">
+            <h2 class="profile__name"> {{ ProfileName }}</h2>
+            <div class="profile_location-container">
+                <LocationIcon class="profile__location-icon"> </LocationIcon>
+                <span class="profile__location"> {{ Location }} </span>
+            </div>
+            <div class="profile__social-links">
+                <SocialLinks socialIcon="#" socialLink="#" socialName="Facebook" />
+                <SocialLinks socialIcon="#" socialLink="#" socialName="Twitter" />
+                <SocialLinks socialIcon="#" socialLink="#" socialName="LinkedIn" />
+            </div>
+            <p class="profile__descripiton"> {{ ProfileDescription }}</p>
+            <From class="profile__form"></From>
+        </div>
     </div>
 </template>
 
 <style scoped>
 .profile {
     display: flex;
-    width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 20px;
+    padding-left: 200px;
+    max-width: 80%;
 }
+
+.profile__picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .profile__name {
     font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.profile_location-container {
+    display: flex;
+    align-items: center;
     margin: 10px 0;
 }
-.profile__descripiton {
+
+.profile__social-links {
+    display: flex;
+    justify-content: flex-start;
     margin: 10px 0;
 }
-.profile__location {
-    margin: 10px 0;
+
+.profile__description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
 }
-.profile__location-icon {
-    margin: 10px 0;
-}
-.profile__picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 10px 0;
+
+.profile__form {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
 }
 </style>
