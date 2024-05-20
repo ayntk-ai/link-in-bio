@@ -62,28 +62,38 @@ defineProps({
                 <p class="service-card__revenue"> {{ ServiceRevenue }}</p>
                 <span class="service-card__revenue-text"> MRR </span>
             </div>
-            <a class="service-card__link" v-bind:href="ServiceLink" target="_blank" rel="noopener">Link Text</a>
+            <a class="service-card__link" v-bind:href="ServiceLink" target="_blank" rel="noopener">URL</a>
         </div>
     </div>
 </template>
 
 <style scoped>
-.main {
-    width: 100%;
-}
-
 .service-card {
-    background: #FFFFFF;
-    border-radius: 10px;
+    background: var(--lb-bg-body);
+    border-radius: var(--lb-radius-s);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    padding: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-family: 'Arial', sans-serif;
+    max-width: 450px;
+    padding: var(--lb-space-s);
+    margin-top: var(--lb-space-m);
+    margin-bottom: var(--lb-space-m);
     align-items: flex-start;
+}
+
+@media (prefers-color-scheme: dark) {
+    .service-card {
+        background: var(--lb-bg-body-d-4);
+        border-radius: var(--lb-radius-s);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        padding: var(--lb-space-s);
+        margin-top: var(--lb-space-m);
+        margin-bottom: var(--lb-space-m);
+        align-items: flex-start;
+    }
 }
 
 .service-card__heading {
@@ -91,14 +101,15 @@ defineProps({
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: var(--lb-space-s);
+    color: var(--lb-text);
 }
 
 .service-card__image {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: var(--lb-space-2xs);
 }
 
 .service-card__name-container {
@@ -107,9 +118,9 @@ defineProps({
 }
 
 .service-card__service-name {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
+    font-size: var(--lb-text-l);
+    font-weight: var(--lb-font-700);
+    color: var(--lb-text);
 }
 
 .service-card__name-container-year {
@@ -121,38 +132,38 @@ defineProps({
 
 .service-card__service-start-year,
 .service-card__service-end-year {
-    font-size: 0.9em;
-    color: #666;
+    font-size: var(--lb-text-xs);
+    color: var(--lb-text);
 }
 
 .service-card__service-end-year {
-    margin-left: 5px;
+    margin-left: var(--lb-space-4xs);
 }
 
 .service-card__service-status {
-    background-color: #007bff;
-    color: white;
-    border-radius: 15px;
-    padding: 5px 10px;
-    font-size: 0.8em;
+    background-color: var(--lb-accent);
+    color: var(--lb-bg-body-d);
+    border-radius: var(--lb-radius-xl);
+    padding: var(--lb-space-4xs) var(--lb-space-2xs);
+    font-size: var(--lb-text-xs);
     display: flex;
     align-items: center;
 }
 
 .service-card__content {
-    margin-bottom: 20px;
+    margin-bottom: var(--lb-space-l);
 }
 
 .service-card__role {
-    font-size: 1em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: var(--lb-text-m);
+    font-weight: var(--lb-font-700);
+    color: var(--lb-text);
+    margin-bottom: var(--lb-space-4xs);
 }
 
 .service-card__description {
-    font-size: 0.9em;
-    color: #666;
+    font-size: var(--lb-text-s);
+    color: var(--lb-text);
 }
 
 .service-card__footer {
@@ -168,39 +179,37 @@ defineProps({
 }
 
 .service-card__revenue-icon {
-    color: #333;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-right: 5px;
+    color: var(--lb-text);
+    font-size: var(--lb-text-l);
+    font-weight: var(--lb-font-700);
+    margin-right: var(--lb-space-4xs);
 }
 
 .service-card__revenue {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
+    font-size: var(--lb-text-l);
+    font-weight: var(--lb-font-700);
+    color: var(--lb-text);
     display: flex;
     align-items: center;
 }
 
 .service-card__revenue-text {
-    font-size: 1.2em;
-    color: #666;
-    margin-left: 5px;
+    font-size: var(--lb-text-l);
+    color: var(--lb-bg-body-d-6);
+    margin-left: var(--lb-space-4xs);
+    color: var(--lb-text);
 }
 
 .service-card__link {
-    color: black;
+    background-color: var(--lb-bg-body-d-1);
+    color: var(--lb-text);
     text-decoration: none;
-    font-size: 0.9em;
-    padding: 5px 10px;
-    border-radius: 15px;
+    text-align: center;
+    font-size: var(--lb-text-s);
+    padding: var(--lb-space-4xs) var(--lb-space-2xs);
+    border-radius: var(--lb-radius-xl);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.service-card__link::after {
-    content: url('./icons/LocationIcon.vue');
-    margin-left: 5px;
 }
 </style>

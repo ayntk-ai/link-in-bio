@@ -1,86 +1,93 @@
-/* color palette from <https://github.com/vuejs/theme> */
-:root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 
-/* semantic color variables for this project */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p,
+a,
+li,
+div {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
+  --lb-accent: #FFC857;
+  --lb-bg-body: #ffffff;
+  --lb-bg-body-d-1: #e5e5e5;
+  --lb-bg-body-d-2: #cbcbcb;
+  --lb-bg-body-d-3: #b2b2b2;
+  --lb-bg-body-d-4: #9a9a9a;
+  --lb-bg-body-d-5: #828282;
+  --lb-bg-body-d-6: #6c6c6c;
+  --lb-bg-body-d-7: #565656;
+  --lb-bg-body-d-8: #404040;
+  --lb-bg-body-d-9: #2c2c2c;
+  --lb-bg-body-d-10: #1a1a1a;
+  --lb-text: #000000;
+  --lb-space-4xs: clamp(0.41rem, calc(-0.11vw + 0.43rem), 0.35rem);
+  --lb-space-3xs: clamp(0.51rem, calc(-0.02vw + 0.52rem), 0.5rem);
+  --lb-space-2xs: clamp(0.64rem, calc(0.13vw + 0.61rem), 0.71rem);
+  --lb-space-xs: clamp(0.8rem, calc(0.39vw + 0.72rem), 1rem);
+  --lb-space-s: clamp(1rem, calc(0.81vw + 0.84rem), 1.41rem);
+  --lb-space-m: clamp(1.25rem, calc(1.46vw + 0.96rem), 2rem);
+  --lb-space-l: clamp(1.56rem, calc(2.47vw + 1.07rem), 2.83rem);
+  --lb-space-xl: clamp(1.95rem, calc(3.99vw + 1.16rem), 4rem);
+  --lb-space-2xl: clamp(2.44rem, calc(6.27vw + 1.19rem), 5.65rem);
+  --lb-space-3xl: clamp(3.05rem, calc(9.65vw + 1.12rem), 8rem);
+  --lb-space-4xl: clamp(3.81rem, calc(14.62vw + 0.89rem), 11.3rem);
+  --lb-text-xs: clamp(0.69rem, calc(-0.11vw + 0.71rem), 0.63rem);
+  --lb-text-s: clamp(0.78rem, calc(0.13vw + 0.75rem), 0.84rem);
+  --lb-text-m: clamp(0.88rem, calc(0.49vw + 0.78rem), 1.13rem);
+  --lb-text-l: clamp(0.98rem, calc(1.01vw + 0.78rem), 1.5rem);
+  --lb-text-xl: clamp(1.11rem, calc(1.74vw + 0.76rem), 2rem);
+  --lb-text-2xl: clamp(1.25rem, calc(2.77vw + 0.69rem), 2.66rem);
+  --lb-text-3xl: clamp(1.4rem, calc(4.2vw + 0.56rem), 3.55rem);
+  --lb-text-4xl: clamp(1.58rem, calc(6.16vw + 0.34rem), 4.74rem);
+  --lb-radius-xs: clamp(0.25rem, calc(0vw + 0.25rem), 0.25rem);
+  --lb-radius-s: clamp(0.38rem, calc(-0.24vw + 0.55rem), 0.5rem);
+  --lb-radius-m: clamp(0.63rem, calc(-0.24vw + 0.8rem), 0.75rem);
+  --lb-radius-l: clamp(1rem, calc(-0.49vw + 1.35rem), 1.25rem);
+  --lb-radius-xl: clamp(1.63rem, calc(-0.73vw + 2.15rem), 2rem);
+  --lb-radius-full: 999rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --lb-bg-body: #001933;
+    --lb-bg-body-d-1: #02172f;
+    --lb-bg-body-d-2: #04162b;
+    --lb-bg-body-d-3: #051427;
+    --lb-bg-body-d-4: #051223;
+    --lb-bg-body-d-5: #05101f;
+    --lb-bg-body-d-6: #050e1b;
+    --lb-bg-body-d-7: #040b17;
+    --lb-bg-body-d-8: #030913;
+    --lb-bg-body-d-9: #02060e;
+    --lb-bg-body-d-10: #010307;
+    --lb-text: #ffffff;
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
-body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

@@ -5,10 +5,10 @@ defineProps({
         required: false
     },
     LinkImage: {
-        type: Image,
+        type: String,
         required: false
     },
-    
+
     LinkDescription: {
         type: String,
         required: false
@@ -43,29 +43,46 @@ defineProps({
 
 <style scoped>
 .link-card {
-    background: #FFFFFF;
-    border-radius: 4px;
+    background: white;
+    border-radius: var(--lb-radius-s);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    padding: 16px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    padding: var(--lb-space-m);
+    margin-top: var(--lb-space-m);
+    margin-bottom: var(--lb-space-m);
     font-family: 'Arial', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    .link-card {
+        background: var(--lb-bg-body-d-4);
+        border-radius: var(--lb-radius-s);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        padding: var(--lb-space-m);
+        margin-top: var(--lb-space-m);
+        margin-bottom: var(--lb-space-m);
+        font-family: 'Arial', sans-serif;
+    }
+
 }
 
 .link-card__heading {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: var(--lb-space-m);
+    color: var(--lb-text);
 }
 
 .link-card__image {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    margin-right: 8px;
+    margin-right: var(--lb-space-xs);
 }
 
 .link-card__name-container {
@@ -74,18 +91,18 @@ defineProps({
 }
 
 .link-card__service-name {
-    font-size: 1em;
-    font-weight: bold;
-    color: #333;
+    font-size: var(--lb-text-m);
+    font-weight: var(--lb-font-700);
+    color: var(--lb-text);
 }
 
 .link-card__content {
-    margin-bottom: 16px;
+    margin-bottom: var(--lb-space-m);
 }
 
 .link-card__description {
-    font-size: 0.8em;
-    color: #666;
+    font-size: var(--lb-text-xs);
+    color: var(--lb-text);
 }
 
 .link-card__footer {
@@ -95,12 +112,12 @@ defineProps({
 }
 
 .link-card__link {
-    color: #007bff;
+    color: var(--lb-accent);
     text-decoration: none;
-    font-size: 0.8em;
-    padding: 4px 8px; 
-    border: 1px solid #007bff;
-    border-radius: 4px;
+    font-size: var(--lb-text-xs);
+    padding: var(--lb-space-4xs) var(--lb-space-2xs);
+    border: 1px solid var(--lb-accent);
+    border-radius: var(--lb-radius-s);
     display: inline-block;
 }
 </style>

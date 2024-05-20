@@ -16,7 +16,7 @@ defineProps({
         required: false
     },
     ProfilePicture: {
-        type: Image,
+        type: String,
         required: false
     }
 })
@@ -24,7 +24,7 @@ defineProps({
 
 <template>
     <div class="profile">
-        <img class="profile__picture" s:src="ProfilePicture" alt="Description of image">
+        <img class="profile__picture" :src="ProfilePicture" alt="Description of image">
         <div class="profile__content">
             <h2 class="profile__name"> {{ ProfileName }}</h2>
             <div class="profile_location-container">
@@ -32,9 +32,11 @@ defineProps({
                 <span class="profile__location"> {{ Location }} </span>
             </div>
             <div class="profile__social-links">
-                <SocialLinks socialIcon="#" socialLink="#" socialName="Facebook" />
-                <SocialLinks socialIcon="#" socialLink="#" socialName="Twitter" />
-                <SocialLinks socialIcon="#" socialLink="#" socialName="LinkedIn" />
+                <SocialLinks socialIcon="src/assets/images/instagram.png" socialLink="https://instagram.com/"
+                    socialName="Facebook" />
+                <SocialLinks socialIcon="src/assets/images/x.png" socialLink="https://x.com/" socialName="X" />
+                <SocialLinks socialIcon="src/assets/images/linkedin.png" socialLink="https://www.linkedin.com/"
+                    socialName="LinkedIn" />
             </div>
             <p class="profile__descripiton"> {{ ProfileDescription }}</p>
             <From class="profile__form"></From>
@@ -47,17 +49,18 @@ defineProps({
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
-    padding-left: 200px;
-    max-width: 80%;
+    padding: var(--lb-space-s);
+    padding-left: var(--lb-space-2xl);
+    max-width: 90%;
 }
 
-.profile__picture {
-    border-radius: 50%;
+.profile__picture,
+.fit-cover {
+    border-radius: 30px;
     width: 150px;
     height: 150px;
+    margin-right: var(--lb-space-l);
     object-fit: cover;
-    margin-right: 20px;
 }
 
 .profile__content {
@@ -67,33 +70,35 @@ defineProps({
 }
 
 .profile__name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-size: var(--lb-text-l);
+    font-weight: var(--lb-font-700);
+    color: var(--lb-text);
     margin: 0;
 }
 
 .profile_location-container {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: var(--lb-space-xs) 0;
+    gap: var(--lb-space-3xs);
+    color: var(--lb-text);
 }
 
 .profile__social-links {
     display: flex;
     justify-content: flex-start;
-    margin: 10px 0;
+    margin: var(--lb-space-xs) 0;
 }
 
-.profile__description {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
+.profile__descripiton {
+    font-size: var(--lb-text-s);
+    color: var(--lb-text);
+    margin-bottom: var(--lb-space-l);
 }
 
 .profile__form {
     width: 100%;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
+    border-top: 1px solid var(--lb-bg-body-d-1);
+    padding-top: var(--lb-space-xs);
 }
 </style>
