@@ -12,13 +12,13 @@ import Link from './Link.vue'
 
         <div class="services-tab" v-if="activeTab === 'services'">
 
-            <Card class="card" ServiceName="Photo Lens" ServiceImage="src/assets/images/service-1.jpg"
+            <Card class="card" ServiceName="Photo Lens" ServiceImage="src/public/images/service-1.jpg"
                 ServiceStartYear="2018" ServiceEndYear="2020" PersonalServiceRole="Designer" ServiceDescription="Officia irure fugiat duis ad. Consectetur velit exercitation do occaecat cillum culpa. Eiusmod occaecat id laborum laboris. Voluptate anim ullamco nisi enim. Commodo do velit excepteur fugiat. Officia enim aute reprehenderit enim irure. Eu tempor et pariatur anim voluptate dolore eiusmod enim commodo.
 " ServiceStatus="Discountinued" ServiceRevenue="10" ServiceLink="https://example.com" />
-            <Card ServiceName="Macbook Clean" ServiceImage="src/assets/images/service-2.jpg" ServiceStartYear="2021"
+            <Card ServiceName="Macbook Clean" ServiceImage="src/public/images/service-2.jpg" ServiceStartYear="2021"
                 ServiceEndYear="x" PersonalServiceRole="Developer" ServiceDescription="Officia irure fugiat duis ad. Consectetur velit exercitation do occaecat cillum culpa. Eiusmod occaecat id laborum laboris. Voluptate anim ullamco nisi enim. Commodo do velit excepteur fugiat. Officia enim aute reprehenderit enim irure. Eu tempor et pariatur anim voluptate dolore eiusmod enim commodo.
 " ServiceStatus="Growing" ServiceRevenue="1200" ServiceLink="https://example.com" />
-            <Card ServiceName="Money Report" ServiceImage="src/assets/images/service-3.jpg" ServiceStartYear="2023"
+            <Card ServiceName="Money Report" ServiceImage="src/public/images/service-3.jpg" ServiceStartYear="2023"
                 ServiceEndYear="2024" PersonalServiceRole="Developer" ServiceDescription="Officia irure fugiat duis ad. Consectetur velit exercitation do occaecat cillum culpa. Eiusmod occaecat id laborum laboris. Voluptate anim ullamco nisi enim. Commodo do velit excepteur fugiat. Officia enim aute reprehenderit enim irure. Eu tempor et pariatur anim voluptate dolore eiusmod enim commodo.
 " ServiceStatus="Sold" ServiceRevenue="25000" ServiceLink="https://example.com" />
 
@@ -26,9 +26,9 @@ import Link from './Link.vue'
 
         <div v-if="activeTab === 'links'">
             <div class="links-tab">
-                <Link LinkName="Substack" LinkImage="src/assets/images/newsletter.jpg"
+                <Link LinkName="Substack" LinkImage="src/public/images/newsletter.jpg"
                     LinkDescription="My montly Newsletter" LinkText="Read More" LinkURL="https://substack.com" />
-                <Link LinkName="Portfolio" LinkImage="src/assets/images/portfolio.jpg" LinkDescription="My Portfolio"
+                <Link LinkName="Portfolio" LinkImage="src/public/images/portfolio.jpg" LinkDescription="My Portfolio"
                     LinkText="Read More" LinkURL="https://substack.com" />
             </div>
         </div>
