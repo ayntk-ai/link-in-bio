@@ -8,7 +8,7 @@ import Tab from './components/Tab.vue'
     <div class="profile">
       <Profile ProfileName="Max Mustermann"
         ProfileDescription="Officia irure fugiat duis ad. Consectetur velit exercitation do occaecat cillum culpa. Eiusmod occaecat id laborum laboris. Voluptate anim ullamco nisi enim"
-        Location="Berlin" ProfilePicture="src/assets/images/profile-image.jpg" />
+        Location="Berlin" ProfilePicture="public/images/profile-image.jpg" />
     </div>
 
     <div class="services">
