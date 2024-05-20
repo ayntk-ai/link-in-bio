@@ -32,10 +32,10 @@ defineProps({
                 <span class="profile__location"> {{ Location }} </span>
             </div>
             <div class="profile__social-links">
-                <SocialLinks socialIcon="public/images/instagram.png" socialLink="https://instagram.com/"
+                <SocialLinks socialIcon="/images/instagram.png" socialLink="https://instagram.com/"
                     socialName="Facebook" />
-                <SocialLinks socialIcon="public/images/x.png" socialLink="https://x.com/" socialName="X" />
-                <SocialLinks socialIcon="public/images/linkedin.png" socialLink="https://www.linkedin.com/"
+                <SocialLinks socialIcon="/images/x.png" socialLink="https://x.com/" socialName="X" />
+                <SocialLinks socialIcon="/images/linkedin.png" socialLink="https://www.linkedin.com/"
                     socialName="LinkedIn" />
             </div>
             <p class="profile__descripiton"> {{ ProfileDescription }}</p>
